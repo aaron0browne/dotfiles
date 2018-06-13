@@ -9,6 +9,8 @@
 " vim --noplugin -u vim/vundles.vim -N "+set hidden" "+syntax on" +BundleClean! +BundleInstall +qall
 " Filetype off is required by vundle
 filetype off
+" Session autosave off to enable unattended install.
+let g:session_autosave = 'no'
 
 set rtp+=~/.vim/bundle/vundle/
 set rtp+=~/.vim/vundles/ "Submodules
