@@ -10,10 +10,6 @@
 
 [![Join the chat at https://gitter.im/skwp/dotfiles](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/skwp/dotfiles?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-#### sh -c "\`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh \`"
-
-**Always be sure to run `rake update` after pulling to ensure plugins are updated**
-
 ## What is YADR?
 
 **YADR is an opinionated dotfile repo that will make your heart sing**
@@ -35,18 +31,7 @@ Please use GitHub Issues for pull requests or bug reports only.
 
 ## Installation
 
-To get started please run:
-
-```bash
-sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
-```
-
-**Note:** YADR will automatically install all of its subcomponents. If you want to be asked
-about each one, use:
-
-```bash
-sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`" -s ask
-```
+Use the ansible role in [`retcon`](https://github.com/aaron0browne/retcon).
 
 ## Wait, you're not done! Do this:
 
@@ -85,8 +70,9 @@ Upgrading is easy.
 ```bash
 cd ~/.yadr
 git pull --rebase
-rake update
 ```
+
+Then re-run the ansible role.
 
 ## What's included, and how to customize?
 
@@ -200,7 +186,7 @@ of plugins above to learn more.
  * `gK` - Opens the documentation for the word under the cursor.
  * Spacebar - Sneak - type two characters to move there in a line. Kind of like vim's `f` but more accurate.
  * `:Gsearch foo` - global search, then do your normal `%s/search/replace/g` and follow up with `:Greplace` to replace across all files. When done use `:wall` to write all the files.
- 
+
 
 #### File Navigation
 

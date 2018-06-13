@@ -22,7 +22,7 @@ alias yip='yadr init-plugins'
 # PS
 alias psa="ps aux"
 alias psg="ps aux | grep "
-alias psr='ps aux | grep ruby'
+alias psp='ps aux | grep python'
 
 # Moving around
 alias cdb='cd -'
@@ -43,12 +43,18 @@ fi
 # show me files matching "ls grep"
 alias lsg='ll | grep'
 
+# emacs
+alias emacs='emacsclient -n'
+alias semacs='sudo emacsclient -n'
+alias temacs='emacsclient -t'
+alias kemacs="emacsclient -e '(kill-emacs)'"
+
 # Alias Editing
 TRAPHUP() {
   source $yadr/zsh/aliases.zsh
 }
 
-alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
+alias ae='emacs $yadr/zsh/aliases.zsh' #alias edit
 alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
 alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 
@@ -66,7 +72,7 @@ alias :q='exit'
 alias ve='vim ~/.vimrc'
 
 # zsh profile editing
-alias ze='vim ~/.zshrc'
+alias ze='emacs ~/.zshrc'
 
 # Git Aliases
 alias gs='git status'
@@ -77,7 +83,7 @@ alias gsa='git stash apply'
 alias gsh='git show'
 alias gshw='git show'
 alias gshow='git show'
-alias gi='vim .gitignore'
+alias gi='emacs .gitignore'
 alias gcm='git ci -m'
 alias gcim='git ci -m'
 alias gci='git ci'
@@ -93,7 +99,7 @@ alias gam='git amend --reset-author'
 alias grv='git remote -v'
 alias grr='git remote rm'
 alias grad='git remote add'
-alias gr='git rebase'
+alias gre='git rebase'
 alias gra='git rebase --abort'
 alias ggrc='git rebase --continue'
 alias gbi='git rebase --interactive'

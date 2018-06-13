@@ -29,7 +29,7 @@ syntax on
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all 
+" The mapleader has to be set before vundle starts loading all
 " the plugins.
 let mapleader=","
 
@@ -115,4 +115,7 @@ set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
+" Turn off yadr solarized enhancements...I don't remember why
+let g:yadr_disable_solarized_enhancements = 1
+" Source the custom settings in vim/settings
 so ~/.yadr/vim/settings.vim

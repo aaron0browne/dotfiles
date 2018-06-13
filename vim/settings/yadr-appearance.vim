@@ -13,9 +13,9 @@ if has("gui_running")
   set columns=190
 
   if has("gui_gtk2")
-    set guifont=Inconsolata\ XL\ 12,Inconsolata\ 15,Monaco\ 12
+    set guifont=Source\ Code\ Pro\ 18,Inconsolata\ XL\ 16,Inconsolata\ 18,Monaco\ 18
   else
-    set guifont=Inconsolata\ XL:h17,Inconsolata:h20,Monaco:h17
+    set guifont=Source\ Code\ Pro:h18,Inconsolata\ XL:h16,Inconsolata:h18,Monaco:h18
   end
 else
   let g:CSApprox_loaded = 1
@@ -27,5 +27,9 @@ else
   end
 endif
 
+if !has("gui_running")
+      let g:solarized_termtrans=1
+endif
+
+set background=light
 colorscheme solarized
-set background=dark
